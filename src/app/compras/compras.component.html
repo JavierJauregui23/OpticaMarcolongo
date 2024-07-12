@@ -1,0 +1,18 @@
+
+  <h1>Tu Carrito de Compras</h1>
+<div class="product-box">
+
+<ul>
+
+     @for (lente of comprasList$ | async ; track lente.modelo) {
+       <li> {{ lente.marca }}
+            {{ lente.modelo }}
+            {{ lente.precio }}
+            {{lente.cantidad}}
+      </li>
+    } @empty {
+        <li>No hay lentes para mostrar.</li>
+         }
+    </ul>
+  </div>
+  <button class="btn-comprar">Comprar</button>

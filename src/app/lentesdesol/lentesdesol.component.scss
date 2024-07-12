@@ -1,0 +1,24 @@
+h1 {
+font-size: 70px;
+font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 50px;
+    height:auto;
+
+}
+
+.producto :hover {
+    border: solid;
+    color:brown;
+}
+
+.promo {
+    background-color: chartreuse;
+}
+.bordediv{
+    border: 3px solid #ccc; 
+  padding: 10px;
+  border-radius: 5px;
+}

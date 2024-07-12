@@ -1,0 +1,50 @@
+<h1>Lentes de Sol</h1>
+
+<div class="contenedor">
+  <div class="row">
+    <div class="col-md-8">
+<table class="table">
+    <thead>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Imagen</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Compra</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @for (lente of lentessol; track $index) {
+        <tr>
+            <td [class.promo] = "lente.promo">{{lente.marca}}</td>
+            <td [class.promo] = "lente.promo">{{lente.modelo}}</td>
+            <td [class.promo] = "lente.promo"><img [src]= "lente.imagen"></td>
+            <td [class.promo] = "lente.promo">{{lente.precio }}</td>
+            @if (lente.stock >0) {
+                <td>{{lente.stock }}</td>
+              } @else {
+                <td class="sin">SIN STOCK</td>
+              }
+            <td> <app-input [(cantidad)]="lente.cantidad" [max]="lente.stock" ></app-input> </td>
+            <button class="btn" (click)="agregarCompra(lente)">Comprar</button>
+
+        </tr>
+          } @empty {
+            <tr>
+              <td colspan="4">No hay lentes para mostrar.</td>
+            </tr>
+        }
+   
+  
+
+    </tbody>
+</table>
+</div>
+
+<div class="col-md-3 bordediv">
+   <app-compras></app-compras>
+</div>
+  </div>
+</div>

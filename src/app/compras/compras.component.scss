@@ -1,0 +1,22 @@
+.product-box {
+   
+    padding: 20px;
+    
+    text-align: left;
+    background-color: #f9f9f9;
+  }
+  
+  .product-box ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .btn-comprar {
+    background-color: #007bff; 
+        color: white;
+    border: none; 
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    float:right;
+  }
